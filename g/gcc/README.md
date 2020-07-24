@@ -8,11 +8,9 @@ This is specs for GCC Images.
 
 There are two tags in this folder each of them is a new image:
 
-* musl: Alpine based gcc updated image. It uses gcc package of Alpine.
-![Musl Container](https://img.shields.io/docker/image-size/zaryob/gcc/musl?color=green&label=%22musl%22%20image%20size&logo=codesandbox)
+* *musl*: ![Musl Container](https://img.shields.io/docker/image-size/zaryob/gcc/musl?color=green&label=%22musl%22%20image%20size&logo=codesandbox) Alpine based gcc updated image. It uses gcc package of Alpine.
 
-* glibc: Building is under construction.
-![Glibc Container](https://img.shields.io/docker/image-size/zaryob/gcc/glibc?color=green&label=%22glibc%22%20image%20size&logo=codesandbox)
+* *glibc*: ![Glibc Container](https://img.shields.io/docker/image-size/zaryob/gcc/glibc?color=green&label=%22glibc%22%20image%20size&logo=codesandbox) Building is under construction.
 
 
 **Note:** Latest builded with using glibc.
