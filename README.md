@@ -8,6 +8,3 @@ Instead of constantly changing the operating system, I decided to
  make docker images, which will keep the tool sets in an operating
  system constantly updated.
 
-The images I made:
- * gcc: Created with one toolchain (musl)
-        I will make it with other toolchains.
