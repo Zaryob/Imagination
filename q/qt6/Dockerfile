@@ -1,6 +1,6 @@
 FROM ubuntu:20.10
 
-ENV QT_VERSION v5.15.2
+ENV QT_VERSION v6.0.3
 ENV QT_CREATOR_VERSION v4.14
 
 # Build prerequisites
@@ -25,7 +25,7 @@ RUN mkdir -p /qt/build
 
 WORKDIR /qt/build
 
-ADD build_qt.sh /qt/build/build_qt.sh
+ADD build_qt.sh ./build_qt.sh
 RUN QT_VERSION=$QT_VERSION QT_CREATOR_VERSION=$QT_CREATOR_VERSION /qt/build/build_qt.sh
 
 USER user
