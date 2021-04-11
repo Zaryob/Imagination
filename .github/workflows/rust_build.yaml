@@ -28,7 +28,7 @@ jobs:
           cd r/rust/rust-nightly/musl
           docker buildx build --push \
             --tag "${{ secrets.DOCKER_USERNAME }}"/rust:nightly_musl \
-            --platform linux/amd64,linux/arm/v7,linux/arm64 .
+            --platform linux/amd64,linux/arm64 .
       - name: build the nightly glibc image
         run: |
           cd r/rust/rust-nightly/glibc
@@ -40,7 +40,7 @@ jobs:
           cd r/rust/rust-stable/musl
           docker buildx build --push \
             --tag "${{ secrets.DOCKER_USERNAME }}"/rust:stable_musl \
-            --platform linux/amd64,linux/arm/v7,linux/arm64 .
+            --platform linux/amd64,linux/arm64 .
       - name: build the stable glibc image
         run: |
           cd r/rust/rust-stable/glibc
