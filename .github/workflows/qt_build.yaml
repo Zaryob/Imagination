@@ -17,10 +17,16 @@ jobs:
           version: latest
       - name: login to docker hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-      - name: build the latest image
+      - name: build the qt5 image
         run: |
           cd q/qt5
           docker buildx build --push \
-            --tag "${{ secrets.DOCKER_USERNAME }}"/qt-designer:latest \
+            --tag "${{ secrets.DOCKER_USERNAME }}"/qt-designer:qt5 \
+            --platform linux/amd64,linux/arm/v7,linux/arm64 .
+      - name: build the qt6 image
+        run: |
+          cd q/qt6
+          docker buildx build --push \
+            --tag "${{ secrets.DOCKER_USERNAME }}"/qt-designer:qt6 \
             --platform linux/amd64,linux/arm/v7,linux/arm64 .
 

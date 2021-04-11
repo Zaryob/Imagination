@@ -25,8 +25,8 @@ RUN mkdir -p /qt/build
 
 WORKDIR /qt/build
 
-ADD build_qt.sh ./build_qt.sh
-RUN QT_VERSION=$QT_VERSION QT_CREATOR_VERSION=$QT_CREATOR_VERSION /qt/build/build_qt.sh
+ADD ./build_qt.sh build_qt.sh
+RUN QT_VERSION=$QT_VERSION QT_CREATOR_VERSION=$QT_CREATOR_VERSION bash build_qt.sh
 
 USER user
 
